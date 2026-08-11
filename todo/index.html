@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>To-Do App | Ibrahim Aminu Umar</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- Header -->
+        <header class="app-header">
+
+            <div>
+                <p class="small-title">MY TASK MANAGER</p>
+                <h1>To-Do App</h1>
+                <p class="subtitle">
+                    Organize your tasks and get more done.
+                </p>
+            </div>
+
+            <button id="themeBtn" class="theme-btn" title="Toggle theme">
+                ☾
+            </button>
+
+        </header>
+
+
+        <!-- Add Task -->
+        <section class="add-task">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What needs to be done?"
+                autocomplete="off"
+            >
+
+            <button id="addBtn">
+                Add Task
+            </button>
+
+        </section>
+
+
+        <!-- Filters -->
+        <section class="task-controls">
+
+            <div class="filters">
+
+                <button class="filter active" data-filter="all">
+                    All
+                </button>
+
+                <button class="filter" data-filter="pending">
+                    Pending
+                </button>
+
+                <button class="filter" data-filter="completed">
+                    Completed
+                </button>
+
+            </div>
+
+            <button id="clearCompleted">
+                Clear Completed
+            </button>
+
+        </section>
+
+
+        <!-- Task List -->
+        <section class="tasks-section">
+
+            <div id="emptyMessage" class="empty-message">
+                <div class="empty-icon">✓</div>
+
+                <h2>No tasks yet</h2>
+
+                <p>
+                    Add your first task above.
+                </p>
+            </div>
+
+            <ul id="taskList"></ul>
+
+        </section>
+
+
+        <!-- Progress -->
+        <footer class="app-footer">
+
+            <div class="progress-info">
+
+                <div class="progress-text">
+                    <span id="completedCount">0</span>
+                    of
+                    <span id="totalCount">0</span>
+                    tasks completed
+                </div>
+
+                <div class="progress-bar">
+                    <div id="progressFill"></div>
+                </div>
+
+            </div>
+
+            <div class="footer-brand">
+                <strong>Ibrahim Aminu Umar</strong>
+                <span>Frontend Web Developer</span>
+            </div>
+
+        </footer>
+
+    </main>
+
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+
+        <div class="modal-content">
+
+            <button id="closeModal" class="close-modal">
+                ×
+            </button>
+
+            <h2>Edit Task</h2>
+
+            <input
+                type="text"
+                id="editInput"
+                placeholder="Edit your task"
+            >
+
+            <button id="saveEdit" class="save-btn">
+                Save Changes
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App | Ibrahim Aminu Umar</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="weather-app">
+
+        <header class="header">
+            <div>
+                <p class="mini-title">WEATHER FORECAST</p>
+                <h1>Weather App</h1>
+                <p>Check the current weather anywhere.</p>
+            </div>
+
+            <div class="header-icon">☀</div>
+        </header>
+
+
+        <!-- Search -->
+
+        <section class="search-box">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name..."
+                autocomplete="off"
+            >
+
+            <button id="searchBtn">
+                Search
+            </button>
+
+        </section>
+
+
+        <p id="errorMessage" class="error-message"></p>
+
+
+        <!-- Current Weather -->
+
+        <section id="weatherContent" class="weather-content">
+
+            <div class="location">
+                <div>
+                    <h2 id="cityName">Kano</h2>
+                    <p id="countryName">Nigeria</p>
+                </div>
+
+                <div class="date" id="currentDate"></div>
+            </div>
+
+
+            <div class="main-weather">
+
+                <div class="weather-icon" id="weatherIcon">
+                    ☀️
+                </div>
+
+                <div class="temperature">
+                    <span id="temperature">--</span>
+                    <sup>°C</sup>
+                </div>
+
+                <div class="condition" id="condition">
+                    Loading...
+                </div>
+
+            </div>
+
+
+            <!-- Weather Details -->
+
+            <div class="details">
+
+                <div class="detail-card">
+                    <span>💧</span>
+                    <p>Humidity</p>
+                    <strong id="humidity">--%</strong>
+                </div>
+
+                <div class="detail-card">
+                    <span>💨</span>
+                    <p>Wind</p>
+                    <strong id="wind">-- km/h</strong>
+                </div>
+
+                <div class="detail-card">
+                    <span>🌡️</span>
+                    <p>Feels Like</p>
+                    <strong id="feelsLike">--°C</strong>
+                </div>
+
+                <div class="detail-card">
+                    <span>🌧️</span>
+                    <p>Rain</p>
+                    <strong id="rain">-- mm</strong>
+                </div>
+
+            </div>
+
+
+            <!-- Forecast -->
+
+            <div class="forecast-section">
+
+                <div class="section-title">
+                    <h3>5-Day Forecast</h3>
+                </div>
+
+                <div id="forecast" class="forecast"></div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            <p>
+                Built by <strong>Ibrahim Aminu Umar</strong>
+            </p>
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

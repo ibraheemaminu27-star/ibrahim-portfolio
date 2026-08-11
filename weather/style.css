@@ -1,0 +1,474 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    padding: 25px 15px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #eef5ff;
+
+    color: #172033;
+}
+
+.weather-app {
+    width: 100%;
+    max-width: 850px;
+
+    margin: auto;
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 30px;
+
+    box-shadow: 0 20px 60px rgba(30, 80, 140, 0.12);
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.mini-title {
+    color: #2684ff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 7px;
+}
+
+.header h1 {
+    font-size: 38px;
+
+    margin-bottom: 6px;
+}
+
+.header p {
+    color: #7d879a;
+
+    font-size: 14px;
+}
+
+.header-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: #fff4c7;
+
+    font-size: 35px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+.search-box input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 15px 17px;
+
+    border: 1px solid #dce3ee;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    color: #172033;
+}
+
+.search-box input:focus {
+    border-color: #2684ff;
+
+    box-shadow: 0 0 0 3px rgba(38, 132, 255, 0.08);
+}
+
+.search-box button {
+    border: none;
+
+    padding: 0 25px;
+
+    border-radius: 10px;
+
+    background: #2684ff;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.search-box button:hover {
+    background: #126edb;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.error-message {
+    min-height: 20px;
+
+    margin-bottom: 5px;
+
+    color: #e04d61;
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.weather-content {
+    margin-top: 15px;
+}
+
+.location {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid #edf0f5;
+}
+
+.location h2 {
+    font-size: 28px;
+
+    margin-bottom: 4px;
+}
+
+.location p {
+    color: #858da0;
+
+    font-size: 14px;
+}
+
+.date {
+    color: #858da0;
+
+    font-size: 13px;
+
+    text-align: right;
+}
+
+
+/* =========================
+   MAIN WEATHER
+========================= */
+
+.main-weather {
+    text-align: center;
+
+    padding: 30px 15px;
+}
+
+.weather-icon {
+    font-size: 65px;
+
+    margin-bottom: 5px;
+}
+
+.temperature {
+    font-size: 70px;
+
+    font-weight: bold;
+
+    line-height: 1;
+}
+
+.temperature sup {
+    font-size: 28px;
+
+    vertical-align: top;
+
+    margin-left: 3px;
+}
+
+.condition {
+    margin-top: 10px;
+
+    color: #697489;
+
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   DETAILS
+========================= */
+
+.details {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+}
+
+.detail-card {
+    padding: 18px 10px;
+
+    text-align: center;
+
+    border: 1px solid #e7ebf2;
+
+    border-radius: 13px;
+
+    background: #fafcff;
+}
+
+.detail-card span {
+    font-size: 22px;
+}
+
+.detail-card p {
+    margin: 8px 0 5px;
+
+    color: #858da0;
+
+    font-size: 12px;
+}
+
+.detail-card strong {
+    font-size: 15px;
+
+    color: #20283a;
+}
+
+
+/* =========================
+   FORECAST
+========================= */
+
+.forecast-section {
+    border-top: 1px solid #edf0f5;
+
+    padding-top: 25px;
+}
+
+.section-title {
+    margin-bottom: 15px;
+}
+
+.section-title h3 {
+    font-size: 19px;
+}
+
+.forecast {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 10px;
+}
+
+.forecast-card {
+    padding: 17px 8px;
+
+    text-align: center;
+
+    border: 1px solid #e7ebf2;
+
+    border-radius: 13px;
+
+    background: #fafcff;
+}
+
+.forecast-day {
+    color: #6f788b;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.forecast-icon {
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.forecast-temp {
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.forecast-temp span {
+    color: #9aa1af;
+
+    font-weight: normal;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #edf0f5;
+
+    text-align: center;
+
+    color: #9299a8;
+
+    font-size: 12px;
+}
+
+footer strong {
+    color: #2684ff;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.loading {
+    opacity: 0.5;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 12px 8px;
+    }
+
+    .weather-app {
+        padding: 20px;
+
+        border-radius: 18px;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .header-icon {
+        width: 50px;
+        height: 50px;
+
+        font-size: 27px;
+    }
+
+    .details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .forecast {
+        grid-template-columns: repeat(5, 1fr);
+
+        overflow-x: auto;
+    }
+
+    .forecast-card {
+        min-width: 95px;
+    }
+
+    .temperature {
+        font-size: 58px;
+    }
+
+    .location {
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .date {
+        font-size: 11px;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        height: 48px;
+    }
+
+    .forecast {
+        grid-template-columns: repeat(5, 100px);
+
+        overflow-x: auto;
+
+        padding-bottom: 5px;
+    }
+
+}
