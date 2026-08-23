@@ -4,11 +4,10 @@ const previousDisplay = document.getElementById("previous");
 const numberButtons = document.querySelectorAll("[data-number]");
 const operatorButtons = document.querySelectorAll("[data-operator]");
 const actionButtons = document.querySelectorAll("[data-action]");
-
 let currentValue = "0";
 let previousValue = "";
 let operator = null;
-let resetDisplay = false;
+let resetDisplay = false;;;;
 
 
 // ===============================
